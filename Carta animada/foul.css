@@ -1,0 +1,87 @@
+body {
+  background-color: rgb(13, 4, 22);
+  scroll-behavior: smooth;
+  overflow: hidden;
+  overflow-x: hidden;
+  color: white;
+}
+
+.text {
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.5s;
+  margin: 0;
+  padding-bottom: 3rem;
+  color: #db5b00;
+  text-shadow: -1px -1px 0 #282828b3, 1px -1px 0 #282828b3, -1px 1px 0 #282828b3,
+    3px 3px 0 #282828b3;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.contenedor {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+.icono-anim {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  transition: 0.5s;
+  z-index: 0;
+}
+.Tarnished-dorado {
+  width: 30rem;
+  height: 30rem;
+  transition: 0.6s;
+  opacity: 0;
+  transform-origin: bottom;
+  position: fixed;
+  z-index: 1;
+}
+.fondo {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  background-image: url(images/Foul\ Tarnished.jpg);
+  background-size: cover;
+  transition: 0.5s;
+  transform-origin: center;
+  z-index: 0;
+}
+.icono-anim:hover .Tarnished-dorado {
+  opacity: 1;
+  transform: translateY(-10%);
+}
+.icono-anim:hover .text {
+  font-size: 5rem;
+  transform: translateY(-30%);
+}
+
+.icono-anim:hover .fondo {
+  opacity: 0.8;
+  transform: perspective(50rem) translateY(5%) rotateX(30deg);
+  z-index: -1;
+}
+
+/*#region Scrollbar*/
+/* propiedades de la scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* el fondo */
+::-webkit-scrollbar-track {
+  background: #424242;
+}
+/* la barra */
+::-webkit-scrollbar-thumb {
+  background: #f76500;
+}
+/* mouse sobre barra*/
+::-webkit-scrollbar-thumb:hover {
+  background: #db5b00;
+}
+
+/*#endregion*/
